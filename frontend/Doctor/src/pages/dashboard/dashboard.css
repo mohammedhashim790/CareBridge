@@ -1,0 +1,503 @@
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+    background-color: #f5f7fa;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+.main-header {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-left h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language-select {
+    border: none;
+    background: none;
+    color: #718096;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.notification-bell {
+    position: relative;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #718096;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #e53e3e;
+    color: white;
+    font-size: 0.75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-avatar img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.edit-button {
+    background: #3182ce;
+    border: 1px solid #3182ce;
+    color: white;
+}
+
+.edit-button:hover {
+    background: #2c5aa0;
+}
+
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.doctor-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a5568;
+    font-size: 0.875rem;
+}
+
+.info-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.info-section {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.section-header svg {
+    color: #718096;
+    cursor: pointer;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 450px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-item label {
+    font-size: 0.875rem;
+    color: #718096;
+    font-weight: 500;
+}
+
+.info-item span {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.visits-section {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tabs {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tab {
+    background: none;
+    border: none;
+    padding: 1rem 0;
+    color: #718096;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab.active {
+    color: #3182ce;
+    border-bottom-color: #3182ce;
+}
+
+.appointments-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.appointment-row {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px 120px;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.appointment-time .time {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.appointment-time .date {
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.appointment-service .service-label,
+.appointment-patient .patient-label,
+.appointment-status .status-label {
+    font-size: 0.75rem;
+    color: #718096;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.appointment-service .service-name,
+.appointment-doctor .patient-name {
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.status-badge {
+    background: #bee3f8;
+    color: #2b6cb0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+
+.profile-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-section {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-section .section-header {
+    margin-bottom: 1rem;
+}
+
+.download-all {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #3182ce;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f7fafc;
+    border-radius: 0.5rem;
+}
+
+.file-item svg {
+    color: #3182ce;
+}
+
+.file-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.file-name {
+    font-size: 0.875rem;
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.file-size {
+    font-size: 0.75rem;
+    color: #718096;
+}
+
+.file-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.file-actions button {
+    background: none;
+    border: none;
+    color: #718096;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+
+@media (max-width: 1024px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-sections {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .appointment-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mobile-menu-overlay {
+        display: flex;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .main-header {
+        padding: 1rem;
+    }
+
+    .header-right {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-end;
+    }
+
+    .profile-content {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .doctor-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .doctor-avatar img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .info-section {
+        padding: 1.5rem;
+    }
+
+    .visits-section {
+        padding: 1.5rem;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .sidebar-section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-left h1 {
+        font-size: 1.25rem;
+    }
+
+    .header-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .doctor-info h2 {
+        font-size: 1.25rem;
+    }
+
+    .contact-info {
+        align-items: center;
+    }
+
+    .appointment-row {
+        padding: 0.75rem;
+    }
+
+    .file-item {
+        padding: 0.5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .mobile-menu-overlay {
+        animation: slideIn 0.3s ease-out;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+button:focus,
+select:focus,
+a:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: 2px;
+}
+
+
+* {
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}

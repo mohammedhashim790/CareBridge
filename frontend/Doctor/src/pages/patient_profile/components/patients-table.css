@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+    .mobile-table-row {
+        display: block;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        padding: 16px;
+        background: white;
+    }
+
+    .mobile-table-cell {
+        display: block;
+        text-align: left !important;
+        border: none !important;
+        padding: 8px 0 !important;
+    }
+
+    .mobile-table-cell:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #6b7280;
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.875rem;
+    }
+}
+
+.patient-row {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.patient-row:hover {
+    background-color: rgba(59, 130, 246, 0.05) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.patient-row:active {
+    transform: translateY(0);
+}

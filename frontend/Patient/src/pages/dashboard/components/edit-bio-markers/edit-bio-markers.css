@@ -1,0 +1,438 @@
+
+.simple-medical-form-container {
+    padding: var(--spacing-xl);
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+/* Form Title */
+.form-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+/* Form Layout */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Form Labels */
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Form Inputs */
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text-primary);
+    background-color: var(--card-background);
+    transition: all 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    appearance: none;
+}
+
+/* Input with Unit */
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.input-unit {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    min-width: 40px;
+}
+
+/* Multi-Select Component */
+.multi-select-container {
+    position: relative;
+    --primary-blue: #4a90e2;
+    --primary-blue-dark: #357abd;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --border-color: #e5e7eb;
+    --border-focus: #4a90e2;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    --hover-color: #f3f4f6;
+    --selected-color: #dbeafe;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --border-radius: 6px;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+}
+
+.selected-allergies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.selected-allergy {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background-color: var(--selected-color);
+    color: var(--primary-blue);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    border: 1px solid var(--primary-blue);
+}
+
+.remove-allergy {
+    background: none;
+    border: none;
+    color: var(--primary-blue);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.remove-allergy:hover {
+    background-color: rgba(74, 144, 226, 0.2);
+}
+
+.multi-select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--card-background);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 48px;
+}
+
+.multi-select-trigger:hover {
+    border-color: var(--border-focus);
+}
+
+.multi-select-trigger.open {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.multi-select-text {
+    font-size: 1rem;
+    color: var(--text-primary);
+    flex: 1;
+    text-align: left;
+}
+
+.multi-select-chevron {
+    color: var(--text-secondary);
+    transition: transform 0.2s ease;
+}
+
+.multi-select-chevron.open {
+    transform: rotate(180deg);
+}
+
+.multi-select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-focus);
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.multi-select-option {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.multi-select-option:last-child {
+    border-bottom: none;
+}
+
+.multi-select-option.selected {
+    background-color: var(--selected-color);
+    color: var(--primary-blue);
+}
+
+.option-label {
+    font-size: 0.875rem;
+    flex: 1;
+}
+
+/* Error Messages */
+.error-message {
+    font-size: 0.875rem;
+    color: var(--danger-color);
+    margin-top: var(--spacing-xs);
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--border-color);
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    min-width: 200px;
+    min-height: 48px;
+}
+
+
+.submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-button.submitting {
+    background-color: var(--text-secondary);
+}
+
+.submit-button.success {
+    background-color: var(--success-color);
+}
+
+/* Spinner Animation */
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.success-icon {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .simple-medical-form-container {
+        padding: var(--spacing-md);
+    }
+
+    .form-wrapper {
+        padding: var(--spacing-lg);
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-medical-form-container {
+        padding: var(--spacing-sm);
+    }
+
+    .form-wrapper {
+        padding: var(--spacing-md);
+    }
+
+    .form-title {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 1rem;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: var(--spacing-sm);
+        font-size: 0.875rem;
+    }
+
+    .selected-allergies {
+        gap: var(--spacing-xs);
+    }
+
+    .selected-allergy {
+        font-size: 0.75rem;
+        padding: 2px var(--spacing-xs);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .simple-medical-form-container {
+        background: white;
+        padding: 0;
+    }
+
+    .form-wrapper {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+
+    .submit-button {
+        display: none;
+    }
+
+    .multi-select-dropdown {
+        display: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000000;
+        --text-secondary: #000000;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .multi-select-trigger {
+        border-width: 2px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .multi-select-trigger,
+    .multi-select-chevron,
+    .submit-button,
+    .spinner {
+        transition: none;
+        animation: none;
+    }
+
+    .submit-button:hover:not(:disabled) {
+        transform: none;
+    }
+}

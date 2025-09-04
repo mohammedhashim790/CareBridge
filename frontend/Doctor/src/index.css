@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #2E81C7;
+    --color-hover: #256DAC ;   
+    --color-active: #1E5A8E;
+    --color-outline: #2E81C7;
+    --color-border: #B3B3B3;
+    --color-text: #111827;
+    --color-text-secondary: #6b7280;
+    --color-background: #ffffff;
+    --color-background-secondary: #f9fafb;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-warning: #f59e0b;
+}
+
+.w-fit-content {
+  width: fit-content;
+}

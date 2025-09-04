@@ -1,0 +1,240 @@
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    min-width: 100vw;
+}
+
+
+.sidebar {
+    width: 280px;
+    background: var(--color-primary);
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.sidebar-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebar-nav-item.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-left-color: white;
+}
+
+.sidebar.collapsed .sidebar-nav-item {
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+.sidebar.collapsed .sidebar-nav-item span {
+    display: none;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-primary);
+    color: white;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.mobile-menu-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-nav {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+.mobile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.mobile-menu-item:hover,
+.mobile-menu-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.mobile-menu-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    transition: margin-left 0.3s ease;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+}
+
+.container.collapsed > .main-content{
+    margin-left: 70px;
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .mobile-menu-overlay {
+        display: flex;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .main-header {
+        padding: 1rem;
+    }
+
+    .sidebar-section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+    .mobile-menu-overlay {
+        animation: slideIn 0.3s ease-out;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+button:focus,
+select:focus,
+a:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: 2px;
+}
+
+
+* {
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}

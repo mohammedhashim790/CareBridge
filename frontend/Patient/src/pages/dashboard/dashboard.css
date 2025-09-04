@@ -1,0 +1,314 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    min-width: 100vw;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    transition: margin-left 0.3s ease;
+    background-color: var(--color-background-light);
+    min-height: 100vh;
+}
+
+.container.collapsed > .main-content {
+    margin-left: 70px;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--color-border-light);
+    background-color: var(--color-card-background);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notification-bell {
+    position: relative;
+    color: var(--color-text-dark);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ef4444;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.carebridge-primary-btn {
+    background-color: var(--color-primary);
+}
+
+.carebridge-primary-btn:hover {
+    background-color: var(--color-hover);
+}
+
+.carebridge-outline-btn {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    border-width: 2px;
+}
+
+.carebridge-outline-btn:hover {
+    background-color: #eff6ff;
+}
+
+.card {
+    background-color: var(--color-card-background);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--color-border-light);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .main-header {
+        padding: 1rem;
+    }
+
+    .main-header .user-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .main-header .user-info .flex-col {
+        display: flex;
+        flex-direction: row;
+        gap: 0.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .main-header .user-info .flex-col span:last-child {
+        font-size: 0.75rem;
+    }
+}
+
+.recent_updates {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+@media (min-width: 769px) {
+    .main-header .user-info .flex-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-header .user-info .flex-col span:last-child {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+* {
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+button:focus,
+select:focus,
+a:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: 2px;
+}
+
+.scrollable-container {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+    transition: scrollbar-color 0.3s ease;
+    -webkit-overflow-scrolling: touch;
+    max-height: 160px;
+}
+
+.scrollable-container:hover {
+    scrollbar-color: #a0aec0 #f7fafc;
+}
+
+.scrollable-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 4px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.scrollable-container:hover::-webkit-scrollbar-thumb {
+    background: #a0aec0;
+}
+
+.scrollable-container:hover::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+@media (max-width: 768px) {
+    .scrollable-container::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    .scrollable-container {
+        scrollbar-width: thin;
+        scrollbar-color: #cbd5e0 #f7fafc;
+        max-height: 200px;
+    }
+}
+
+.patient-profile-section {
+    width: 100%;
+}
+
+.patient-card {
+    background-color: var(--color-card-background);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--color-border-light);
+}
+
+.patient-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.patient-avatar {
+    flex-shrink: 0;
+}
+
+.avatar-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+}
+
+.patient-basic-info {
+    flex: 1;
+}
+
+.patient-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.contact-item svg {
+    color: #9ca3af;
+}
+
+.scrollable-container-enhanced {
+    scrollbar-width: auto;
+    scrollbar-color: #cbd5e0 #f1f5f9;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-container-enhanced::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scrollable-container-enhanced::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.scrollable-container-enhanced::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+    border: 1px solid #f1f5f9;
+}
+
+.scrollable-container-enhanced::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+@media (max-width: 768px) {
+    .patient-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .patient-basic-info {
+        width: 100%;
+    }
+
+    .contact-info {
+        align-items: center;
+    }
+}
