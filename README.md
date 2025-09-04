@@ -1,4 +1,3 @@
-#!/bin/bash
 # CareBridge
 
 <p align="center">
