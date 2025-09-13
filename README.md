@@ -191,11 +191,11 @@ Built front‑end assets can then be served via a static hosting service or inte
 
 This project was developed by the following team members:
 
-- **Dhruva Patil**
-- **Mohammed Hashim Ihthisham ul Haq**
+- **Dhruva Patil** - [GitHub](https://github.com/DhRuva-1509/)
+- **Mohammed Hashim Ihthisham ul Haq** - [GitHub](https://github.com/mohammedhashim790)
 - **Jeonghyeon Lee**
-- **Shubhang Tiwari**
-- **Manpinder Singh**
+- **Shubhang Tiwari** - [GitHub](https://github.com/ST-2004/Carebridge-MD)
+- **Manpinder Singh** - [GitHub](https://github.com/manpinder)
 
 ## Security Analysis
 
@@ -241,8 +241,6 @@ application's performance and accessibility. The results were impressive across 
 3. [Report 3](https://carebridge-assets.s3.ca-central-1.amazonaws.com/reports/3.png)
 
 
-## Contributors
-readme: <@mohammedhashim790>,collaborators
 
 ## License
 
