@@ -241,6 +241,9 @@ application's performance and accessibility. The results were impressive across 
 3. [Report 3](https://carebridge-assets.s3.ca-central-1.amazonaws.com/reports/3.png)
 
 
+## Contributors
+<!-- readme: <mohammedhashim790>,collaborators/- -start -->
+
 ## License
 
 This repository does not currently include a license file.  Unless otherwise specified by the project maintainers, all rights are reserved.  Please contact the contributors if you wish to use any part of this project.
