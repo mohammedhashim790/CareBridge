@@ -242,7 +242,7 @@ application's performance and accessibility. The results were impressive across 
 
 
 ## Contributors
-<!-- readme: <mohammedhashim790>,collaborators/- -start -->
+readme: <@mohammedhashim790>,collaborators
 
 ## License
 
